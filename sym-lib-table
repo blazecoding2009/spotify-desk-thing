@@ -5,4 +5,5 @@
   (lib (name "TPS62162DSGR")(type "KiCad")(uri "${KIPRJMOD}/symbols/TPS62162DSGR/TPS62162DSGR.kicad_sym")(options "")(descr ""))
   (lib (name "ESP32-S3-WROOM-1-N4")(type "KiCad")(uri "${KIPRJMOD}/symbols/ESP32_S3_WROOM_1_N4/ESP32-S3-WROOM-1-N4.kicad_sym")(options "")(descr ""))
   (lib (name "0603L100SLYR")(type "KiCad")(uri "${KIPRJMOD}/symbols/0603L100SLYR/0603L100SLYR.kicad_sym")(options "")(descr ""))
+  (lib (name "TPA6132A2RTER")(type "KiCad")(uri "${KIPRJMOD}/symbols/TPA6132A2RTER/TPA6132A2RTER.kicad_sym")(options "")(descr ""))
 )
