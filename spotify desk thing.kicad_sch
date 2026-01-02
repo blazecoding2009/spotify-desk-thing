@@ -8341,28 +8341,6 @@
 			)
 		)
 	)
-	(global_label "OUTLP"
-		(shape input)
-		(at 234.95 45.72 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8c689f9f-15af-49e1-b4b5-d630fdfeb440")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 243.8619 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "3.3v"
 		(shape input)
 		(at 27.94 63.5 180)
@@ -16025,7 +16003,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x13_Pin"
+		(property "Value" "DFR0669"
 			(at 144.145 19.05 0)
 			(effects
 				(font
