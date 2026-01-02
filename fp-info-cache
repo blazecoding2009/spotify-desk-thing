@@ -1,4 +1,4 @@
-26774400046122685
+26777934809699793
 0603L100SLYR
 FUSC1608X100N
 
@@ -97313,6 +97313,13 @@ rotary encoder illuminated switch vertical
 0
 9
 8
+SJ_3523_SMT_TR
+CUI_SJ-3523-SMT-TR
+
+
+0
+3
+3
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf
@@ -106410,6 +106417,13 @@ Varistor
 Varistor_Panasonic_VF
 Panasonic VF series varistor, 6x8mm body, 3.2mm height, https://mediap.industry.panasonic.eu/assets/imported/industrial.panasonic.com/cdbs/www-data/pdf/AWA0000/AWA0000C4.pdf
 Varistor VF
+0
+2
+2
+footprints
+SW_KSR_CNK
+
+KSR211GLFS 
 0
 2
 2
