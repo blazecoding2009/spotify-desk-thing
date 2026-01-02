@@ -7,4 +7,6 @@
   (lib (name "0603L100SLYR")(type "KiCad")(uri "${KIPRJMOD}/symbols/0603L100SLYR/0603L100SLYR.kicad_sym")(options "")(descr ""))
   (lib (name "TPA6132A2RTER")(type "KiCad")(uri "${KIPRJMOD}/symbols/TPA6132A2RTER/TPA6132A2RTER.kicad_sym")(options "")(descr ""))
   (lib (name "EVP-AWED4A")(type "KiCad")(uri "${KIPRJMOD}/symbols/EVP_AWED4A/EVP-AWED4A.kicad_sym")(options "")(descr ""))
+  (lib (name "SJ-3523-SMT-TR")(type "KiCad")(uri "${KIPRJMOD}/symbols/SJ_3523_SMT_TR/SJ-3523-SMT-TR.kicad_sym")(options "")(descr ""))
+  (lib (name "2026-01-02_19-45-12")(type "KiCad")(uri "${KIPRJMOD}/symbols/KSR211GLFS/KiCADv6/2026-01-02_19-45-12.kicad_sym")(options "")(descr ""))
 )

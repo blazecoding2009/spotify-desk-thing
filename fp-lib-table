@@ -7,4 +7,6 @@
   (lib (name "TPA6132A2RTER")(type "KiCad")(uri "${KIPRJMOD}/symbols/TPA6132A2RTER")(options "")(descr ""))
   (lib (name "TPS62162DSGR")(type "KiCad")(uri "${KIPRJMOD}/symbols/TPS62162DSGR")(options "")(descr ""))
   (lib (name "EVP_AWED4A")(type "KiCad")(uri "${KIPRJMOD}/symbols/EVP_AWED4A")(options "")(descr ""))
+  (lib (name "SJ_3523_SMT_TR")(type "KiCad")(uri "${KIPRJMOD}/symbols/SJ_3523_SMT_TR")(options "")(descr ""))
+  (lib (name "footprints")(type "KiCad")(uri "${KIPRJMOD}/symbols/KSR211GLFS/KiCADv6/footprints.pretty")(options "")(descr ""))
 )
