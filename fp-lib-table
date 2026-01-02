@@ -6,4 +6,5 @@
   (lib (name "PCM5242RHBR")(type "KiCad")(uri "${KIPRJMOD}/symbols/PCM5242RHBR/footprints.pretty")(options "")(descr ""))
   (lib (name "TPA6132A2RTER")(type "KiCad")(uri "${KIPRJMOD}/symbols/TPA6132A2RTER")(options "")(descr ""))
   (lib (name "TPS62162DSGR")(type "KiCad")(uri "${KIPRJMOD}/symbols/TPS62162DSGR")(options "")(descr ""))
+  (lib (name "EVP_AWED4A")(type "KiCad")(uri "${KIPRJMOD}/symbols/EVP_AWED4A")(options "")(descr ""))
 )
