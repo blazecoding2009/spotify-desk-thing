@@ -1,0 +1,9 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "0603L100SLYR")(type "KiCad")(uri "${KIPRJMOD}/symbols/0603L100SLYR")(options "")(descr ""))
+  (lib (name "EC11E")(type "KiCad")(uri "${KIPRJMOD}/symbols/EC11E/footprints.pretty")(options "")(descr ""))
+  (lib (name "ESP32_S3_WROOM_1_N4")(type "KiCad")(uri "${KIPRJMOD}/symbols/ESP32_S3_WROOM_1_N4")(options "")(descr ""))
+  (lib (name "PCM5242RHBR")(type "KiCad")(uri "${KIPRJMOD}/symbols/PCM5242RHBR/footprints.pretty")(options "")(descr ""))
+  (lib (name "TPA6132A2RTER")(type "KiCad")(uri "${KIPRJMOD}/symbols/TPA6132A2RTER")(options "")(descr ""))
+  (lib (name "TPS62162DSGR")(type "KiCad")(uri "${KIPRJMOD}/symbols/TPS62162DSGR")(options "")(descr ""))
+)
