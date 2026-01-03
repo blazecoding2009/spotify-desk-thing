@@ -50,7 +50,7 @@
       "conflict_shadows",
       "shapes"
     ],
-    "visible_layers": "ffffffff_ffffffff_fffffff7_77ffffff",
+    "visible_layers": "ffffffff_ffffffff_fffffff7_f7ffffff",
     "zone_display_mode": 0
   },
   "git": {
@@ -116,19 +116,7 @@
     "files": [
       {
         "name": "spotify desk thing.kicad_pcb",
-        "open": true,
-        "window": {
-          "display": 0,
-          "maximized": true,
-          "pos_x": -9,
-          "pos_y": -9,
-          "size_x": 1938,
-          "size_y": 1038
-        }
-      },
-      {
-        "name": "spotify desk thing.kicad_sch",
-        "open": true,
+        "open": false,
         "window": {
           "display": 0,
           "maximized": true,
