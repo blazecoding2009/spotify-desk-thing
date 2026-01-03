@@ -5759,12 +5759,6 @@
 		(uuid "0ecd8c2e-13b5-4118-b2e5-299e6a8acb6b")
 	)
 	(junction
-		(at 111.76 74.93)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "18349aaa-1aac-4167-8e2b-54cf4c2d8530")
-	)
-	(junction
 		(at 270.51 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5885,6 +5879,12 @@
 		(uuid "6559490a-20c7-435a-80c7-2e6fbcf6e773")
 	)
 	(junction
+		(at 104.14 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "677f3d03-7b76-45ee-bd23-0e9303a6ca16")
+	)
+	(junction
 		(at 33.02 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5897,10 +5897,10 @@
 		(uuid "6b792cae-d881-46b3-9547-768d264df286")
 	)
 	(junction
-		(at 105.41 102.87)
+		(at 82.55 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "71409013-a455-4d4b-9bcb-90db086c5433")
+		(uuid "719813c2-75cc-4931-8314-aa46c50dc7cd")
 	)
 	(junction
 		(at 270.51 55.88)
@@ -6017,6 +6017,12 @@
 		(uuid "e2de195b-8297-41c8-9825-2ac9b8242270")
 	)
 	(junction
+		(at 111.76 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ef0fd053-9b76-4f93-bb38-c6e3f728f057")
+	)
+	(junction
 		(at 151.13 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6041,24 +6047,88 @@
 		(uuid "ff34bc90-b38e-4c9d-9151-3e7170fcfec5")
 	)
 	(no_connect
+		(at 151.13 87.63)
+		(uuid "01f21e31-41fe-4d52-a768-4a867433e45b")
+	)
+	(no_connect
+		(at 151.13 120.65)
+		(uuid "02f5121f-481c-462d-af49-6e8f5d03c6e0")
+	)
+	(no_connect
+		(at 120.65 115.57)
+		(uuid "0fca7686-fa13-4fad-a476-6dd25cb4a41b")
+	)
+	(no_connect
 		(at 194.31 40.64)
 		(uuid "1b2913c5-5292-47c4-88d3-1253909a390f")
+	)
+	(no_connect
+		(at 151.13 123.19)
+		(uuid "1b384b63-3a7f-4de8-af3d-f1f122a9113c")
+	)
+	(no_connect
+		(at 151.13 90.17)
+		(uuid "2789ff7e-70a4-457c-9a22-89c9c5772a32")
+	)
+	(no_connect
+		(at 120.65 118.11)
+		(uuid "2bfc255d-f4a9-4f3b-bf08-ef74018f3d5a")
+	)
+	(no_connect
+		(at 151.13 107.95)
+		(uuid "2d0cf14e-683e-418f-bf57-5618169ba67e")
+	)
+	(no_connect
+		(at 120.65 95.25)
+		(uuid "2f4ce37f-6c62-4ade-9d04-06e138cbd0dd")
+	)
+	(no_connect
+		(at 120.65 110.49)
+		(uuid "38429be4-6b30-4318-a8d8-49317baf5226")
+	)
+	(no_connect
+		(at 151.13 110.49)
+		(uuid "41865936-d785-478a-abe3-d1daaaafc78f")
+	)
+	(no_connect
+		(at 120.65 82.55)
+		(uuid "5f3f93d4-aef2-46b1-b68a-a7f7aca958eb")
 	)
 	(no_connect
 		(at 240.03 153.67)
 		(uuid "6f24c88a-f36a-4dcb-bb6b-f026c19bec0f")
 	)
 	(no_connect
+		(at 194.31 63.5)
+		(uuid "72bd0b1d-5c4d-48d2-b541-1309cd980332")
+	)
+	(no_connect
 		(at 194.31 50.8)
 		(uuid "8628055f-9fdf-4aac-bf09-f9404adf2caa")
+	)
+	(no_connect
+		(at 120.65 107.95)
+		(uuid "89382b29-238d-4513-93d5-0e863e872a9b")
 	)
 	(no_connect
 		(at 240.03 68.58)
 		(uuid "915260a4-7e58-403d-b2d6-6760e25107a7")
 	)
 	(no_connect
+		(at 194.31 60.96)
+		(uuid "a032b378-5514-4fb3-974a-3d87ca2b3b80")
+	)
+	(no_connect
+		(at 120.65 80.01)
+		(uuid "b2ef61ad-3a6c-48ab-84de-052de86d313a")
+	)
+	(no_connect
 		(at 194.31 35.56)
 		(uuid "c79f7908-1c26-4ed4-83d8-31a143c34b83")
+	)
+	(no_connect
+		(at 151.13 125.73)
+		(uuid "ebd2100c-8ce4-4b43-b0be-33a20588f4ed")
 	)
 	(no_connect
 		(at 240.03 151.13)
@@ -6087,6 +6157,26 @@
 			(type default)
 		)
 		(uuid "00701be6-1e52-4daa-838c-681d0b75084a")
+	)
+	(wire
+		(pts
+			(xy 105.41 91.44) (xy 105.41 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0287b1fc-2813-4740-8c88-157e33a79c49")
+	)
+	(wire
+		(pts
+			(xy 82.55 128.27) (xy 81.28 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03a78944-875a-4b81-83b6-3ab1adee9b8b")
 	)
 	(wire
 		(pts
@@ -6127,6 +6217,16 @@
 			(type default)
 		)
 		(uuid "0e4f707b-b8fc-4c07-9a0a-4df0d2b19411")
+	)
+	(wire
+		(pts
+			(xy 104.14 102.87) (xy 107.95 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e64ec7f-3ab2-4cfe-8f51-aa371d802bc1")
 	)
 	(wire
 		(pts
@@ -6210,7 +6310,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 66.04) (xy 111.76 67.31)
+			(xy 111.76 83.82) (xy 111.76 82.55)
 		)
 		(stroke
 			(width 0)
@@ -6227,6 +6327,16 @@
 			(type default)
 		)
 		(uuid "2134c536-a149-4d09-8f8a-8a915b05f940")
+	)
+	(wire
+		(pts
+			(xy 81.28 125.73) (xy 82.55 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22112e04-70f8-4330-8c46-c2735505fffb")
 	)
 	(wire
 		(pts
@@ -6520,7 +6630,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 90.17) (xy 105.41 92.71)
+			(xy 104.14 91.44) (xy 104.14 92.71)
 		)
 		(stroke
 			(width 0)
@@ -6560,7 +6670,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 97.79) (xy 109.22 104.14)
+			(xy 107.95 97.79) (xy 107.95 102.87)
 		)
 		(stroke
 			(width 0)
@@ -6597,16 +6707,6 @@
 			(type default)
 		)
 		(uuid "5fdbcf8f-4663-460f-bfd3-d60a1ed18392")
-	)
-	(wire
-		(pts
-			(xy 111.76 74.93) (xy 116.84 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "60cb14f7-5143-476c-b95d-a7c4c4445d72")
 	)
 	(wire
 		(pts
@@ -6870,13 +6970,13 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 104.14) (xy 105.41 102.87)
+			(xy 96.52 90.17) (xy 97.79 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "90436a21-82e1-4f8e-98d7-1953e3d41de3")
+		(uuid "942e2d69-c1e5-4f82-bd54-73f1ede12ee1")
 	)
 	(wire
 		(pts
@@ -7030,6 +7130,16 @@
 	)
 	(wire
 		(pts
+			(xy 31.75 119.38) (xy 33.02 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab7e0172-50d1-4a55-9fd0-2c714ea9434d")
+	)
+	(wire
+		(pts
 			(xy 151.13 153.67) (xy 151.13 156.21)
 		)
 		(stroke
@@ -7060,13 +7170,23 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 181.61) (xy 24.13 181.61)
+			(xy 21.59 181.61) (xy 24.13 181.61)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "af835d9f-2fc7-4824-86a4-f5ec855c9e8c")
+	)
+	(wire
+		(pts
+			(xy 82.55 125.73) (xy 82.55 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1cc8716-93ab-4e65-9b79-4ab4de0670af")
 	)
 	(wire
 		(pts
@@ -7210,6 +7330,16 @@
 	)
 	(wire
 		(pts
+			(xy 31.75 127) (xy 33.02 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cdfb7734-7886-42dd-91a2-0e39432484d4")
+	)
+	(wire
+		(pts
 			(xy 76.2 30.48) (xy 76.2 34.29)
 		)
 		(stroke
@@ -7280,6 +7410,16 @@
 	)
 	(wire
 		(pts
+			(xy 104.14 91.44) (xy 105.41 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc8b8a02-d600-4aa7-925b-4b2c98513f14")
+	)
+	(wire
+		(pts
 			(xy 40.64 119.38) (xy 40.64 123.19)
 		)
 		(stroke
@@ -7307,16 +7447,6 @@
 			(type default)
 		)
 		(uuid "dde87fc3-ce0a-452f-9808-c8a5b0bb48f1")
-	)
-	(wire
-		(pts
-			(xy 109.22 104.14) (xy 105.41 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ddf4b567-5ab5-4f51-a862-e0b9d625ffec")
 	)
 	(wire
 		(pts
@@ -7457,6 +7587,16 @@
 			(type default)
 		)
 		(uuid "faaf880c-ca87-472b-9e37-1afc7fc9c404")
+	)
+	(wire
+		(pts
+			(xy 111.76 74.93) (xy 116.84 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb659e47-af60-442b-972f-af80ab11f19f")
 	)
 	(wire
 		(pts
@@ -8182,22 +8322,22 @@
 	)
 	(global_label "3.3v"
 		(shape input)
-		(at 33.02 127 180)
+		(at 31.75 127 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "5ad73e3c-1126-42d6-9373-1c4682b75649")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.0434 127 0)
+			(at 31.75 120.0234 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -8578,22 +8718,22 @@
 	)
 	(global_label "3.3v"
 		(shape input)
-		(at 33.02 119.38 180)
+		(at 31.75 119.38 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "a09545aa-e675-495e-bbd5-71bc9fe7fc6f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.0434 119.38 0)
+			(at 31.75 112.4034 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -8798,44 +8938,44 @@
 	)
 	(global_label "3.3v"
 		(shape input)
-		(at 22.86 181.61 180)
+		(at 21.59 181.61 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "c4869f4f-4089-40f3-89d7-0eb5f2be0dc1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 15.8834 181.61 0)
+			(at 21.59 174.6334 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
 	)
 	(global_label "3.3v"
 		(shape input)
-		(at 97.79 90.17 180)
+		(at 96.52 90.17 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "c528f1dd-7919-4161-ba51-c99958c606fa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 90.8134 90.17 0)
+			(at 96.52 83.1934 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -9267,7 +9407,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "01ffb38b-85c8-4a2e-9b5d-575c10758261")
-		(property "Reference" "C2"
+		(property "Reference" "C3"
 			(at 20.066 170.942 0)
 			(effects
 				(font
@@ -9366,7 +9506,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C2")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -9448,7 +9588,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0ad45ba9-4725-4447-8578-72fa4947522d")
-		(property "Reference" "R10"
+		(property "Reference" "R7"
 			(at 70.612 36.322 0)
 			(effects
 				(font
@@ -9547,7 +9687,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "R10")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -9562,7 +9702,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0da5333a-d37f-4161-a617-e933d5405b9d")
-		(property "Reference" "R7"
+		(property "Reference" "R4"
 			(at 100.33 88.646 90)
 			(effects
 				(font
@@ -9661,7 +9801,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "R7")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -9676,7 +9816,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0e2ef00b-e5ab-4f0f-bc7b-0ec20066cb5b")
-		(property "Reference" "C19"
+		(property "Reference" "C13"
 			(at 82.296 176.022 0)
 			(effects
 				(font
@@ -9775,7 +9915,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C19")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -9790,7 +9930,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "10200d98-c547-4020-b1dd-681bdabd5840")
-		(property "Reference" "R1"
+		(property "Reference" "R9"
 			(at 155.702 91.44 90)
 			(effects
 				(font
@@ -9889,7 +10029,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "R1")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -10144,7 +10284,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 111.76 66.04 180)
+		(at 111.76 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10153,7 +10293,7 @@
 		(fields_autoplaced yes)
 		(uuid "18b494dc-af5c-4ec9-a841-535c33e41215")
 		(property "Reference" "#PWR013"
-			(at 111.76 59.69 0)
+			(at 111.76 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10162,7 +10302,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 111.76 60.96 0)
+			(at 111.76 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10171,7 +10311,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 111.76 66.04 0)
+			(at 111.76 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10180,7 +10320,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 111.76 66.04 0)
+			(at 111.76 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10189,7 +10329,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 111.76 66.04 0)
+			(at 111.76 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10218,7 +10358,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "19118a99-3891-4db7-948e-562848d47ec2")
-		(property "Reference" "R8"
+		(property "Reference" "R13"
 			(at 181.356 17.78 0)
 			(effects
 				(font
@@ -10317,7 +10457,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "R8")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -10400,7 +10540,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "20aefce7-543a-482b-97de-35fce5af9441")
-		(property "Reference" "C18"
+		(property "Reference" "C11"
 			(at 85.09 184.1499 0)
 			(effects
 				(font
@@ -10499,7 +10639,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C18")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -10582,7 +10722,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "23fce8c6-5577-42ee-b237-4e5bf681b2d1")
-		(property "Reference" "U4"
+		(property "Reference" "U3"
 			(at 60.96 113.03 0)
 			(effects
 				(font
@@ -10645,7 +10785,7 @@
 		(instances
 			(project ""
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "U4")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -10728,7 +10868,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2ed86ad6-3b78-49dc-b091-ee21131bf686")
-		(property "Reference" "U3"
+		(property "Reference" "U1"
 			(at 217.17 21.59 0)
 			(effects
 				(font
@@ -10878,7 +11018,7 @@
 		(instances
 			(project ""
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "U3")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -10886,16 +11026,16 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 81.28 128.27 90)
+		(at 82.55 128.27 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "33324626-17c2-4168-bb5b-41bd9b9761ed")
 		(property "Reference" "#PWR027"
-			(at 87.63 128.27 0)
+			(at 82.55 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10904,7 +11044,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.36 128.27 0)
+			(at 82.55 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10913,7 +11053,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 81.28 128.27 0)
+			(at 82.55 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10922,7 +11062,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 81.28 128.27 0)
+			(at 82.55 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10931,7 +11071,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 81.28 128.27 0)
+			(at 82.55 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10960,7 +11100,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3abb2c83-c53d-436d-b533-c456be4abaca")
-		(property "Reference" "R9"
+		(property "Reference" "R6"
 			(at 27.94 176.5299 0)
 			(effects
 				(font
@@ -11059,7 +11199,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "R9")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -11074,7 +11214,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4165b261-fd83-43cd-be7e-094e833690dc")
-		(property "Reference" "C13"
+		(property "Reference" "C8"
 			(at 30.734 187.198 0)
 			(effects
 				(font
@@ -11173,7 +11313,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C13")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -11442,7 +11582,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "469eb5ab-6c5d-4eea-9e7a-63638dd4e656")
-		(property "Reference" "R4"
+		(property "Reference" "R1"
 			(at 34.798 117.348 90)
 			(effects
 				(font
@@ -11541,7 +11681,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "R4")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -11556,7 +11696,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4a089270-ea5c-40c2-ac45-83345a2b81ae")
-		(property "Reference" "C4"
+		(property "Reference" "C14"
 			(at 24.13 26.6701 0)
 			(effects
 				(font
@@ -11655,7 +11795,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C4")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -11737,7 +11877,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "535149b6-0ada-439f-8ce4-5f6c02431139")
-		(property "Reference" "C8"
+		(property "Reference" "C9"
 			(at 254.508 44.958 90)
 			(effects
 				(font
@@ -11834,7 +11974,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C8")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -11850,7 +11990,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5528921b-d544-4e07-8194-bba2d1e3233c")
-		(property "Reference" "C10"
+		(property "Reference" "C2"
 			(at 274.32 58.4199 0)
 			(effects
 				(font
@@ -11949,7 +12089,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C10")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -12479,7 +12619,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "83ba408e-5f16-4baa-8831-983ab096ca84")
-		(property "Reference" "J2"
+		(property "Reference" "J1"
 			(at 224.79 119.126 0)
 			(effects
 				(font
@@ -12613,7 +12753,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "J2")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -12809,7 +12949,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8669fb67-349b-4af5-b525-09612dd09846")
-		(property "Reference" "C7"
+		(property "Reference" "C15"
 			(at 21.59 38.1001 0)
 			(effects
 				(font
@@ -12908,7 +13048,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C7")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -13237,7 +13377,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9127840e-3db2-45e6-b2ad-78e67e98070c")
-		(property "Reference" "C12"
+		(property "Reference" "C17"
 			(at 27.94 73.914 90)
 			(effects
 				(font
@@ -13336,7 +13476,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C12")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -13419,7 +13559,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9657cf87-cd44-4ccd-8c3e-83c55bcde529")
-		(property "Reference" "U1"
+		(property "Reference" "U4"
 			(at 135.89 64.77 0)
 			(effects
 				(font
@@ -13653,7 +13793,7 @@
 		(instances
 			(project ""
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "U1")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -13668,7 +13808,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "966ceac9-f609-4188-9d55-7f7086cc313c")
-		(property "Reference" "C9"
+		(property "Reference" "C7"
 			(at 250.19 54.6099 0)
 			(effects
 				(font
@@ -13767,7 +13907,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C9")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -13917,7 +14057,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9c315b3d-3080-4d81-ac96-edcb1805ec8b")
-		(property "Reference" "R13"
+		(property "Reference" "R8"
 			(at 251.46 125.984 90)
 			(effects
 				(font
@@ -14014,7 +14154,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "R13")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -14029,7 +14169,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9cc8161a-b1ed-459b-a1a0-2f84dc725c74")
-		(property "Reference" "C16"
+		(property "Reference" "C1"
 			(at 262.89 58.4199 0)
 			(effects
 				(font
@@ -14128,74 +14268,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 81.28 125.73 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9cd7166c-ab04-478b-a77d-7c5e8d80fc5e")
-		(property "Reference" "#PWR028"
-			(at 87.63 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 86.36 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 81.28 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 81.28 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 81.28 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8918f2f3-7933-4e83-9ef8-4b1d306a6292")
-		)
-		(instances
-			(project "spotify desk thing"
-				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "#PWR028")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -14210,7 +14283,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a3f1cca2-8d7e-4f5b-9fb0-5b99975774ea")
-		(property "Reference" "R3"
+		(property "Reference" "R2"
 			(at 34.544 124.968 90)
 			(effects
 				(font
@@ -14309,7 +14382,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "R3")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -14525,7 +14598,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ac793952-acbb-4b18-bcd5-69870214cb3c")
-		(property "Reference" "R6"
+		(property "Reference" "R12"
 			(at 181.356 27.94 0)
 			(effects
 				(font
@@ -14624,7 +14697,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "R6")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -14639,7 +14712,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "adce0755-34ea-41ff-9f09-f739e71d145f")
-		(property "Reference" "C3"
+		(property "Reference" "C12"
 			(at 262.382 41.148 0)
 			(effects
 				(font
@@ -14738,7 +14811,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C3")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -14883,7 +14956,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b009d258-8310-466c-a09f-37ca0b1f8dbf")
-		(property "Reference" "C15"
+		(property "Reference" "C5"
 			(at 274.32 71.1199 0)
 			(effects
 				(font
@@ -14982,7 +15055,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C15")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -14997,7 +15070,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b3c01c9c-4915-44da-b32e-69a155730815")
-		(property "Reference" "C17"
+		(property "Reference" "C18"
 			(at 243.84 112.776 90)
 			(effects
 				(font
@@ -15094,7 +15167,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C17")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -15102,7 +15175,7 @@
 	)
 	(symbol
 		(lib_id "Switch:CK_KMS2xxG")
-		(at 105.41 97.79 90)
+		(at 104.14 97.79 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15110,7 +15183,7 @@
 		(dnp no)
 		(uuid "b6c155ac-976f-4c68-be1f-3b7c5084bd20")
 		(property "Reference" "BOOT1"
-			(at 101.092 97.79 0)
+			(at 99.822 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15118,7 +15191,7 @@
 			)
 		)
 		(property "Value" "BOOT"
-			(at 99.314 97.79 0)
+			(at 98.044 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15126,7 +15199,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_SMD:SW_SPST_CK_KMS2xxG"
-			(at 100.33 97.79 0)
+			(at 99.06 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15135,7 +15208,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ckswitches.com/media/1482/kms.pdf"
-			(at 100.33 97.79 0)
+			(at 99.06 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15144,7 +15217,7 @@
 			)
 		)
 		(property "Description" "Microminiature SMT Side Actuated, 4.2 x 2.8 x 1.42mm, without pegs, with shield pin"
-			(at 105.41 97.79 0)
+			(at 104.14 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15153,7 +15226,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 105.41 97.79 0)
+			(at 104.14 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15162,7 +15235,7 @@
 			)
 		)
 		(property "DigiKey_Part_Number" ""
-			(at 105.41 97.79 0)
+			(at 104.14 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15171,7 +15244,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" ""
-			(at 105.41 97.79 0)
+			(at 104.14 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15180,7 +15253,7 @@
 			)
 		)
 		(property "Purchase-URL" ""
-			(at 105.41 97.79 0)
+			(at 104.14 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15189,7 +15262,7 @@
 			)
 		)
 		(property "Part #" "KSR211GLFS"
-			(at 105.41 97.79 0)
+			(at 104.14 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15198,7 +15271,7 @@
 			)
 		)
 		(property "MF" "Panasonic"
-			(at 105.41 97.79 0)
+			(at 104.14 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15208,7 +15281,7 @@
 			)
 		)
 		(property "DESCRIPTION" "Tactile Switch SPST-NO Top Actuated Surface Mount"
-			(at 105.41 97.79 0)
+			(at 104.14 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15218,7 +15291,7 @@
 			)
 		)
 		(property "PACKAGE" "None"
-			(at 105.41 97.79 0)
+			(at 104.14 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15228,7 +15301,7 @@
 			)
 		)
 		(property "PRICE" "None"
-			(at 105.41 97.79 0)
+			(at 104.14 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15238,7 +15311,7 @@
 			)
 		)
 		(property "MP" "EVP-AWBD2A"
-			(at 105.41 97.79 0)
+			(at 104.14 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15248,7 +15321,7 @@
 			)
 		)
 		(property "AVAILABILITY" "Bad"
-			(at 105.41 97.79 0)
+			(at 104.14 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15352,7 +15425,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb06779b-c475-4211-85d6-8cd80d4a50b1")
-		(property "Reference" "J1"
+		(property "Reference" "J2"
 			(at 35.56 87.63 0)
 			(effects
 				(font
@@ -15418,7 +15491,7 @@
 		(instances
 			(project ""
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "J1")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -15434,7 +15507,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "be6ade83-45d9-430c-ac66-b8159fe866f3")
-		(property "Reference" "C14"
+		(property "Reference" "C19"
 			(at 156.21 74.9299 0)
 			(effects
 				(font
@@ -15533,7 +15606,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C14")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -15541,7 +15614,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 105.41 102.87 0)
+		(at 104.14 102.87 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15550,7 +15623,7 @@
 		(dnp no)
 		(uuid "c15532c9-be2a-4034-8aef-472ed53263f4")
 		(property "Reference" "#PWR012"
-			(at 105.41 109.22 0)
+			(at 104.14 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15559,7 +15632,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 105.41 107.95 0)
+			(at 104.14 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15568,7 +15641,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 105.41 102.87 0)
+			(at 104.14 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15577,7 +15650,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 105.41 102.87 0)
+			(at 104.14 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15586,7 +15659,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 105.41 102.87 0)
+			(at 104.14 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16245,7 +16318,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "e2c446ae-88b4-46d3-a824-254bfc315dda")
-		(property "Reference" "C5"
+		(property "Reference" "C16"
 			(at 39.624 22.606 0)
 			(effects
 				(font
@@ -16344,7 +16417,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C5")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -16527,7 +16600,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ea1671c3-e79c-4505-8e40-c2def2d0d2ce")
-		(property "Reference" "R12"
+		(property "Reference" "R3"
 			(at 84.582 117.348 90)
 			(effects
 				(font
@@ -16626,7 +16699,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "R12")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -16634,7 +16707,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 38.1 158.75 270)
+		(at 38.1 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16643,7 +16716,7 @@
 		(fields_autoplaced yes)
 		(uuid "eb34a1a1-73c5-451d-abe8-0e492d8f858e")
 		(property "Reference" "#PWR03"
-			(at 31.75 158.75 0)
+			(at 38.1 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16652,7 +16725,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 33.02 158.75 0)
+			(at 38.1 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16887,7 +16960,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f119613c-a1fc-4dcb-9a8f-ed2ab23ec453")
-		(property "Reference" "R2"
+		(property "Reference" "R10"
 			(at 155.702 85.09 90)
 			(effects
 				(font
@@ -16986,7 +17059,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "R2")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -17069,7 +17142,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fcbc5862-6153-4017-95b8-4175e0f3102c")
-		(property "Reference" "C11"
+		(property "Reference" "C10"
 			(at 274.32 40.6399 0)
 			(effects
 				(font
@@ -17168,7 +17241,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C11")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -17176,15 +17249,15 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 111.76 71.12 180)
+		(at 111.76 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "fd6b45e5-6bf5-471d-8f78-2b6d222e462d")
-		(property "Reference" "C1"
-			(at 106.426 70.866 0)
+		(property "Reference" "C4"
+			(at 117.094 78.994 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17193,7 +17266,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 106.426 69.088 0)
+			(at 117.094 80.772 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17202,7 +17275,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 110.7948 67.31 0)
+			(at 112.7252 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17211,7 +17284,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 111.76 71.12 0)
+			(at 111.76 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17220,7 +17293,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 111.76 71.12 0)
+			(at 111.76 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17229,7 +17302,7 @@
 			)
 		)
 		(property "Part #" "GCM155R71H104KE02J"
-			(at 111.76 71.12 0)
+			(at 111.76 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17238,7 +17311,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 111.76 71.12 0)
+			(at 111.76 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17247,7 +17320,7 @@
 			)
 		)
 		(property "DigiKey_Part_Number" ""
-			(at 111.76 71.12 0)
+			(at 111.76 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17256,7 +17329,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" ""
-			(at 111.76 71.12 0)
+			(at 111.76 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17265,7 +17338,7 @@
 			)
 		)
 		(property "Purchase-URL" ""
-			(at 111.76 71.12 0)
+			(at 111.76 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17282,7 +17355,7 @@
 		(instances
 			(project "spotify desk thing"
 				(path "/2abd3454-e9e7-4863-a121-b96ccd308cfd"
-					(reference "C1")
+					(reference "C4")
 					(unit 1)
 				)
 			)
