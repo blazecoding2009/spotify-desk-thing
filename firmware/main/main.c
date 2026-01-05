@@ -403,6 +403,7 @@ void app_main(void) {
 			ESP_LOGI(TAG, "Default track: %s", default_track);
 			const char *name = strrchr(default_track, '/');
 			name = name ? name + 1 : default_track;
+			
 			strncpy(default_track_name, name, sizeof(default_track_name) - 1);
 			default_track_name[sizeof(default_track_name) - 1] = '\0';
 			ui_set_track(&ui_ctx, default_track_name);

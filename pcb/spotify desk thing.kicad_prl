@@ -116,7 +116,7 @@
     "files": [
       {
         "name": "spotify desk thing.kicad_pcb",
-        "open": false,
+        "open": true,
         "window": {
           "display": 0,
           "maximized": true,
