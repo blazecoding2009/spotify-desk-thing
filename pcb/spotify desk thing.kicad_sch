@@ -224,7 +224,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:Conn_01x13_Pin"
+		(symbol "Connector:Conn_01x14_Pin"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -240,8 +240,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x13_Pin"
-				(at 0 -17.78 0)
+			(property "Value" "Conn_01x14_Pin"
+				(at 0 -20.32 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -266,7 +266,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x13, script generated"
+			(property "Description" "Generic connector, single row, 01x14, script generated"
 				(at 0 0 0)
 				(effects
 					(font
@@ -301,7 +301,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_01x13_Pin_1_1"
+			(symbol "Conn_01x14_Pin_1_1"
 				(rectangle
 					(start 0.8636 15.367)
 					(end 0 15.113)
@@ -437,6 +437,17 @@
 				(rectangle
 					(start 0.8636 -15.113)
 					(end 0 -15.367)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -17.653)
+					(end 0 -17.907)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -592,6 +603,18 @@
 				(polyline
 					(pts
 						(xy 1.27 -15.24) (xy 0.8636 -15.24)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -17.78) (xy 0.8636 -17.78)
 					)
 					(stroke
 						(width 0.1524)
@@ -828,6 +851,24 @@
 						)
 					)
 					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -17.78 180)
+					(length 3.81)
+					(name "Pin_14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6055,10 +6096,6 @@
 		(uuid "02f5121f-481c-462d-af49-6e8f5d03c6e0")
 	)
 	(no_connect
-		(at 120.65 115.57)
-		(uuid "0fca7686-fa13-4fad-a476-6dd25cb4a41b")
-	)
-	(no_connect
 		(at 194.31 40.64)
 		(uuid "1b2913c5-5292-47c4-88d3-1253909a390f")
 	)
@@ -6071,24 +6108,12 @@
 		(uuid "2789ff7e-70a4-457c-9a22-89c9c5772a32")
 	)
 	(no_connect
-		(at 120.65 118.11)
-		(uuid "2bfc255d-f4a9-4f3b-bf08-ef74018f3d5a")
-	)
-	(no_connect
-		(at 151.13 107.95)
-		(uuid "2d0cf14e-683e-418f-bf57-5618169ba67e")
-	)
-	(no_connect
 		(at 120.65 95.25)
 		(uuid "2f4ce37f-6c62-4ade-9d04-06e138cbd0dd")
 	)
 	(no_connect
 		(at 120.65 110.49)
 		(uuid "38429be4-6b30-4318-a8d8-49317baf5226")
-	)
-	(no_connect
-		(at 151.13 110.49)
-		(uuid "41865936-d785-478a-abe3-d1daaaafc78f")
 	)
 	(no_connect
 		(at 120.65 82.55)
@@ -6125,10 +6150,6 @@
 	(no_connect
 		(at 194.31 35.56)
 		(uuid "c79f7908-1c26-4ed4-83d8-31a143c34b83")
-	)
-	(no_connect
-		(at 151.13 125.73)
-		(uuid "ebd2100c-8ce4-4b43-b0be-33a20588f4ed")
 	)
 	(no_connect
 		(at 240.03 151.13)
@@ -7638,7 +7659,7 @@
 		)
 		(uuid "c979ea0c-565d-44bf-9c49-0575c280f0be")
 	)
-	(global_label "SCREEN_DC"
+	(global_label "LED"
 		(shape input)
 		(at 151.13 115.57 0)
 		(fields_autoplaced yes)
@@ -7650,7 +7671,7 @@
 		)
 		(uuid "069c7c65-daac-48c8-b20e-03bbc33fdb2d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 165.0008 115.57 0)
+			(at 157.5623 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7726,7 +7747,7 @@
 			)
 		)
 	)
-	(global_label "SCREEN_DC"
+	(global_label "LED"
 		(shape input)
 		(at 148.59 39.37 0)
 		(fields_autoplaced yes)
@@ -7738,29 +7759,7 @@
 		)
 		(uuid "13dc8257-a80d-45dc-a039-c0f73d42748b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 162.4608 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SCREEN_SCLK"
-		(shape input)
-		(at 151.13 102.87 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "13dccd73-dfd4-4c9d-a611-cca606c031cf")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 167.2384 102.87 0)
+			(at 155.0223 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7814,7 +7813,51 @@
 			)
 		)
 	)
-	(global_label "SCREEN_BL"
+	(global_label "LCD_RST"
+		(shape input)
+		(at 151.13 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "19ece72b-879a-4a8b-a130-ca4b6d2d0b90")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 162.098 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "LCD_CS"
+		(shape input)
+		(at 151.13 125.73 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1b83e4e0-bf95-4086-b1bb-a3264cc44035")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.1304 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MISO"
 		(shape input)
 		(at 148.59 41.91 0)
 		(fields_autoplaced yes)
@@ -7826,7 +7869,7 @@
 		)
 		(uuid "1cc127bc-824d-4e08-b8f3-8fe6eba43323")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 162.2189 41.91 0)
+			(at 156.1714 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7902,7 +7945,7 @@
 			)
 		)
 	)
-	(global_label "SCREEN_SCLK"
+	(global_label "LCD_CS"
 		(shape input)
 		(at 148.59 26.67 0)
 		(fields_autoplaced yes)
@@ -7914,7 +7957,7 @@
 		)
 		(uuid "241ad743-4bb1-4908-8713-0f995a7bb890")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 164.6984 26.67 0)
+			(at 158.5904 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7964,50 +8007,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "TOUCH_INT"
-		(shape input)
-		(at 148.59 49.53 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2e557534-8613-4d43-812c-977e690cbca9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 161.6748 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SDA"
-		(shape input)
-		(at 148.59 46.99 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2f8574ed-afda-4332-a5d2-21b254ba1fa0")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 155.1433 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -8254,6 +8253,28 @@
 			)
 		)
 	)
+	(global_label "INT"
+		(shape input)
+		(at 148.59 52.07 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4f5d5364-a191-4682-a5cd-a113ebc69be9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 154.4781 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "3.3v"
 		(shape input)
 		(at 154.94 72.39 0)
@@ -8267,6 +8288,28 @@
 		(uuid "4f9a3d23-3636-4cd3-909e-1ec7532a2217")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 161.9166 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "LCD_RS"
+		(shape input)
+		(at 151.13 110.49 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "51dda37e-3983-4de0-aaa7-010a0543b4d1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.1304 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8342,7 +8385,7 @@
 			)
 		)
 	)
-	(global_label "SCREEN_CS"
+	(global_label "MOSI"
 		(shape input)
 		(at 151.13 113.03 0)
 		(fields_autoplaced yes)
@@ -8354,7 +8397,7 @@
 		)
 		(uuid "5c5ec0e0-9f9e-472b-b9e5-6199111270e2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 164.9403 113.03 0)
+			(at 158.7114 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8474,7 +8517,7 @@
 			)
 		)
 	)
-	(global_label "SCREEN_BL"
+	(global_label "MISO"
 		(shape input)
 		(at 151.13 97.79 0)
 		(fields_autoplaced yes)
@@ -8486,7 +8529,7 @@
 		)
 		(uuid "6d9b1113-8f8e-4e81-8bd5-e77a4a4e7418")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 164.7589 97.79 0)
+			(at 158.7114 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8606,7 +8649,7 @@
 			)
 		)
 	)
-	(global_label "SCREEN_MOSI"
+	(global_label "LCD_RST"
 		(shape input)
 		(at 148.59 29.21 0)
 		(fields_autoplaced yes)
@@ -8618,7 +8661,29 @@
 		)
 		(uuid "84fc03e2-5a9b-4035-8ce3-146e7ab68112")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 164.517 29.21 0)
+			(at 159.558 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SD_CS"
+		(shape input)
+		(at 148.59 54.61 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8b4e22c6-ce81-4b12-afab-0670e723b17d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 157.5018 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8668,28 +8733,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SCREEN_MISO"
-		(shape input)
-		(at 151.13 105.41 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9c13c965-02a6-49e4-b2e1-eeb583b92ddb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 167.057 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -8760,7 +8803,7 @@
 			)
 		)
 	)
-	(global_label "TOUCH_INT"
+	(global_label "INT"
 		(shape input)
 		(at 120.65 128.27 180)
 		(fields_autoplaced yes)
@@ -8772,7 +8815,7 @@
 		)
 		(uuid "a666f61e-be75-476e-b375-3744c8701fda")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 107.5652 128.27 0)
+			(at 114.7619 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8804,6 +8847,28 @@
 			)
 		)
 	)
+	(global_label "RST"
+		(shape input)
+		(at 148.59 46.99 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "aabe1efa-f48b-4bbb-bc01-5d79fedd738f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 155.0223 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "ENC_SWITCH"
 		(shape input)
 		(at 83.82 123.19 0)
@@ -8826,7 +8891,7 @@
 			)
 		)
 	)
-	(global_label "SCREEN_CS"
+	(global_label "MOSI"
 		(shape input)
 		(at 148.59 34.29 0)
 		(fields_autoplaced yes)
@@ -8838,7 +8903,7 @@
 		)
 		(uuid "b2d45407-a1fe-4b87-a7ae-edd5b5d87b5b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 162.4003 34.29 0)
+			(at 156.1714 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8980,7 +9045,7 @@
 			)
 		)
 	)
-	(global_label "SCREEN_MISO"
+	(global_label "LCD_RS"
 		(shape input)
 		(at 148.59 31.75 0)
 		(fields_autoplaced yes)
@@ -8992,7 +9057,7 @@
 		)
 		(uuid "c897f14f-b3c9-491c-a6a9-5d3085f143e8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 164.517 31.75 0)
+			(at 158.5904 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9046,28 +9111,6 @@
 			)
 		)
 	)
-	(global_label "SCREEN_MOSI"
-		(shape input)
-		(at 151.13 100.33 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ca29e9f6-1b2b-4738-81c8-5d59baed9ae1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 167.057 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "3.3v"
 		(shape input)
 		(at 116.84 67.31 90)
@@ -9090,7 +9133,7 @@
 			)
 		)
 	)
-	(global_label "SCREEN_RES"
+	(global_label "SCK"
 		(shape input)
 		(at 151.13 118.11 0)
 		(fields_autoplaced yes)
@@ -9102,7 +9145,7 @@
 		)
 		(uuid "cba33885-4770-4d01-993e-f942566de8b5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 166.0893 118.11 0)
+			(at 157.8647 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9178,28 +9221,6 @@
 			)
 		)
 	)
-	(global_label "SD_CS"
-		(shape input)
-		(at 148.59 52.07 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e193100a-a693-4960-ab50-e1f633d93326")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.5018 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "OUTRP"
 		(shape input)
 		(at 240.03 40.64 0)
@@ -9266,7 +9287,7 @@
 			)
 		)
 	)
-	(global_label "SCREEN_RES"
+	(global_label "SCK"
 		(shape input)
 		(at 148.59 36.83 0)
 		(fields_autoplaced yes)
@@ -9278,7 +9299,29 @@
 		)
 		(uuid "ed7c8123-8bd4-4435-9acf-06c038a9ef1b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 163.5493 36.83 0)
+			(at 155.3247 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SDA"
+		(shape input)
+		(at 148.59 49.53 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ef86f0df-d549-4eb2-8b1d-9477e1e2a8a3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 155.1433 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9367,6 +9410,28 @@
 		(uuid "f5c6571b-b3b5-480e-93f5-4dbdabdfa8c5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 182.4953 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RST"
+		(shape input)
+		(at 120.65 115.57 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "faa038fa-4edf-4088-95f0-f040100c1113")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 114.2177 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9489,6 +9554,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 26.67 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C415703"
 			(at 26.67 172.72 0)
 			(effects
 				(font
@@ -9678,6 +9752,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C22859"
+			(at 72.39 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7c2bbe85-fae5-4553-9abc-148539b9221c")
 		)
@@ -9784,6 +9867,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 101.6 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C25804"
 			(at 101.6 90.17 0)
 			(effects
 				(font
@@ -9906,6 +9998,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" " C1525"
+			(at 88.9 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a06c8c0a-5928-4585-9ecc-7faf7efeab71")
 		)
@@ -10012,6 +10113,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 157.48 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C25190"
 			(at 157.48 95.25 0)
 			(effects
 				(font
@@ -10267,6 +10377,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C25905"
+			(at 251.46 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7ca4ce62-9a2e-4c5c-afec-3e35252b0396")
 		)
@@ -10440,6 +10559,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 184.15 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C23162"
 			(at 184.15 19.05 0)
 			(effects
 				(font
@@ -10622,6 +10750,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 81.28 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C15525"
 			(at 81.28 185.42 0)
 			(effects
 				(font
@@ -11190,6 +11327,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C25803"
+			(at 30.48 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "831ebd87-0289-4ab7-b7b8-a3a5588f7510")
 		)
@@ -11296,6 +11442,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 24.13 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" " C1525"
 			(at 24.13 185.42 0)
 			(effects
 				(font
@@ -11672,6 +11827,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C25804"
+			(at 36.83 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1351af24-96be-46fe-8a22-6fc156faae4c")
 		)
@@ -11778,6 +11942,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 27.94 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C12530"
 			(at 27.94 25.4 0)
 			(effects
 				(font
@@ -11965,6 +12138,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C12530"
+			(at 255.27 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "31beacac-c65d-4537-afd2-cf314b1b5857")
 		)
@@ -12072,6 +12254,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 270.51 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C12530"
 			(at 270.51 59.69 0)
 			(effects
 				(font
@@ -12395,6 +12586,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C22859"
+			(at 76.2 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b6ccf071-065c-47df-85b4-25e64d7395ba")
 		)
@@ -12699,6 +12899,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" " C165948"
+			(at 224.79 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "B4"
 			(uuid "8df3f070-270f-41cb-a357-7093cdb2dea8")
 		)
@@ -12850,6 +13059,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 259.08 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" " C1525"
 			(at 259.08 72.39 0)
 			(effects
 				(font
@@ -13031,6 +13249,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 25.4 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C52923"
 			(at 25.4 36.83 0)
 			(effects
 				(font
@@ -13286,6 +13513,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C25804"
+			(at 116.84 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5080293c-e9de-4432-96f6-f5e010adf1fe")
 		)
@@ -13467,6 +13703,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C15849"
+			(at 26.67 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5534c099-5237-4b15-9ebe-41db957c7d25")
 		)
@@ -13567,7 +13812,7 @@
 				)
 			)
 		)
-		(property "Value" "ESP32-S3-WROOM-1-N4"
+		(property "Value" "ESP32-S3-WROOM-1-N16R8"
 			(at 135.89 67.31 0)
 			(effects
 				(font
@@ -13898,6 +14143,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C52923"
+			(at 246.38 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "27c23e8f-74ff-442c-aa5d-53210c3f4232")
 		)
@@ -14145,6 +14399,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C25905"
+			(at 251.46 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a92d3a40-9c1c-4ac8-8e33-111176fcaec0")
 		)
@@ -14259,6 +14522,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" " C1525"
+			(at 259.08 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cfe50aec-ba76-4ca5-8554-0e2d587463db")
 		)
@@ -14365,6 +14637,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 36.83 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25804"
 			(at 36.83 127 0)
 			(effects
 				(font
@@ -14688,6 +14969,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C23162"
+			(at 184.15 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2e4ce6e6-71cd-42a3-a58d-c72a2c165fd0")
 		)
@@ -14802,6 +15092,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" " C1525"
+			(at 259.08 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "71efc6ba-466c-4322-bb61-d01f48238344")
 		)
@@ -14908,6 +15207,15 @@
 					(size 1.27 1.27)
 				)
 				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C40256"
+			(at 60.96 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -15046,6 +15354,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C12530"
+			(at 270.51 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "55b0d2ef-cc58-4dc1-bb7c-fac8e9131a71")
 		)
@@ -15150,6 +15467,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 243.84 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" " C1525"
 			(at 243.84 118.11 0)
 			(effects
 				(font
@@ -15330,6 +15656,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C221784"
+			(at 104.14 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "aacbdbb8-3782-4384-aa24-b620a0515aae")
 		)
@@ -15479,6 +15814,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C4991872"
+			(at 39.37 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "5afc2b26-ee09-4419-a204-b1f9f6a2deb1")
 		)
@@ -15589,6 +15933,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 152.4 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C15525"
 			(at 152.4 76.2 0)
 			(effects
 				(font
@@ -15848,6 +16201,15 @@
 					(size 1.27 1.27)
 				)
 				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C207017"
+			(at 240.03 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -16157,6 +16519,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C221784"
+			(at 102.87 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ab514314-4f56-47e1-9bc1-752c51e6b9bb")
 		)
@@ -16408,6 +16779,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C12530"
+			(at 33.02 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f3ee6990-ba25-46ef-9296-1cd36b2ae96a")
 		)
@@ -16491,7 +16871,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x13_Pin")
+		(lib_id "Connector:Conn_01x14_Pin")
 		(at 143.51 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -16508,7 +16888,7 @@
 				)
 			)
 		)
-		(property "Value" "DFR0669"
+		(property "Value" "ST7796"
 			(at 144.145 19.05 0)
 			(effects
 				(font
@@ -16516,7 +16896,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x13_P2.54mm_Vertical"
+		(property "Footprint" "Connector_FFC-FPC:TE_1-1734839-5_1x15-1MP_P0.5mm_Horizontal"
 			(at 143.51 36.83 0)
 			(effects
 				(font
@@ -16525,7 +16905,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 143.51 36.83 0)
 			(effects
 				(font
@@ -16534,7 +16914,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x13, script generated"
+		(property "Description" ""
 			(at 143.51 36.83 0)
 			(effects
 				(font
@@ -16581,6 +16961,9 @@
 		)
 		(pin "2"
 			(uuid "d7215684-a140-4c5e-a67a-105b7227469a")
+		)
+		(pin "14"
+			(uuid "a303a13e-f6df-430d-b06b-d71e8862364d")
 		)
 		(instances
 			(project ""
@@ -16682,6 +17065,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 82.55 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C25804"
 			(at 82.55 119.38 0)
 			(effects
 				(font
@@ -16869,6 +17261,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C1043"
+			(at 39.37 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "256770a9-4d46-42e9-9fd4-a3ddc2106be5")
 		)
@@ -17042,6 +17443,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 157.48 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C25190"
 			(at 157.48 88.9 0)
 			(effects
 				(font
@@ -17232,6 +17642,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C52923"
+			(at 270.51 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3ea5af51-6e7a-47f1-9a28-deb7e70498aa")
 		)
@@ -17338,6 +17757,15 @@
 			)
 		)
 		(property "Purchase-URL" ""
+			(at 111.76 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" " C1525"
 			(at 111.76 78.74 0)
 			(effects
 				(font

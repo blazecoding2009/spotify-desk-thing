@@ -115,8 +115,20 @@
   "project": {
     "files": [
       {
-        "name": "spotify desk thing.kicad_pcb",
+        "name": "spotify desk thing.kicad_sch",
         "open": true,
+        "window": {
+          "display": 0,
+          "maximized": true,
+          "pos_x": -9,
+          "pos_y": -9,
+          "size_x": 1938,
+          "size_y": 1038
+        }
+      },
+      {
+        "name": "spotify desk thing.kicad_pcb",
+        "open": false,
         "window": {
           "display": 0,
           "maximized": true,
