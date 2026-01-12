@@ -16896,7 +16896,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_FFC-FPC:TE_1-1734839-5_1x15-1MP_P0.5mm_Horizontal"
+		(property "Footprint" "Connector_FFC-FPC:TE_1-1734839-4_1x14-1MP_P0.5mm_Horizontal"
 			(at 143.51 36.83 0)
 			(effects
 				(font
