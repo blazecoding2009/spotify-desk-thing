@@ -3,9 +3,9 @@
 
 yeah this is something i literally thought of while sitting and listening to music and i think it'd look cool lol
 
-<img width="1015" height="606" alt="image" src="https://github.com/user-attachments/assets/9339c4c0-b422-476d-8c0d-4120aff5c89e" />
-<img width="966" height="634" alt="image" src="https://github.com/user-attachments/assets/28c07b35-4f49-4757-8061-c50b0c3904a7" />
-<img width="938" height="648" alt="image" src="https://github.com/user-attachments/assets/8299b425-75d0-4b51-b0bc-224f9176b240" />
+<img width="1157" height="692" alt="image" src="https://github.com/user-attachments/assets/f8da136f-9c3b-475f-a4b2-7d8a0f59a228" />
+<img width="942" height="574" alt="image" src="https://github.com/user-attachments/assets/ae8f1beb-d2d1-449d-833c-9357cfa4fada" />
+<img width="949" height="608" alt="image" src="https://github.com/user-attachments/assets/a69d2e6e-39cf-422b-ba7e-15975e30cf6c" />
 
 ## Features
 
