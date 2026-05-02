@@ -3,10 +3,12 @@
 // this took painful hours to get to work and build. 
 // i spent ages making it look pretty too. don't diss me. 
 
-#include <dirent.h>
+#include "dirent.h"
 #include <stdio.h>
 #include <string.h>
 #include <strings.h>
+#include <unistd.h>
+#include <fcntl.h>
 
 #include "audio.h"
 #include "encoder.h"
@@ -18,6 +20,7 @@
 #include "freertos/queue.h"
 #include "freertos/task.h"
 #include "driver/gpio.h"
+#include "driver/i2c.h"
 #include "driver/sdspi_host.h"
 #include "driver/spi_master.h"
 #include "gt911.h"
@@ -25,6 +28,7 @@
 #include "nvs_flash.h"
 #include "sdmmc_cmd.h"
 #include "ui.h"
+#include "pcm5242.h"
 
 #define TAG "SPOTIFY_DESK"
 
@@ -32,27 +36,31 @@
 #define CONFIG_TFT_SPI_SPEED_HZ (20 * 1000 * 1000)
 #endif
 
-#define SCREEN_MOSI GPIO_NUM_28
-#define SCREEN_MISO GPIO_NUM_30
-#define SCREEN_SCLK GPIO_NUM_29
-#define SCREEN_CS GPIO_NUM_33
-#define SCREEN_DC GPIO_NUM_34
-#define SCREEN_RES GPIO_NUM_35
-#define SCREEN_BL GPIO_NUM_2
-#define SD_CS GPIO_NUM_10
+#define SCREEN_MOSI GPIO_NUM_40
+#define SCREEN_MISO GPIO_NUM_21
+#define SCREEN_SCLK GPIO_NUM_42
+#define SCREEN_CS GPIO_NUM_47
+#define SCREEN_DC GPIO_NUM_39
+#define SCREEN_RES GPIO_NUM_38
+#define SCREEN_BL GPIO_NUM_41
+#define SD_CS GPIO_NUM_48
 
-#define I2C_SDA GPIO_NUM_39
-#define I2C_SCL GPIO_NUM_38
-#define TOUCH_INT GPIO_NUM_9
+#define I2C_SDA GPIO_NUM_1
+#define I2C_SCL GPIO_NUM_2
+#define TOUCH_INT GPIO_NUM_16
 
-#define ENC_A GPIO_NUM_18
-#define ENC_B GPIO_NUM_17
-#define ENC_SW GPIO_NUM_8
+#define ENC_A GPIO_NUM_13
+#define ENC_B GPIO_NUM_14
+#define ENC_SW GPIO_NUM_15
 
 #define I2S_MCLK GPIO_NUM_4
 #define I2S_BCLK GPIO_NUM_5
 #define I2S_LRCLK GPIO_NUM_6
-#define I2S_DOUT GPIO_NUM_7
+#define I2S_DIN GPIO_NUM_7
+
+// PCM5242 DAC control pins
+#define PCM5242_I2C_ADDR 0x48      // Default I2C address for PCM5242
+#define PCM5242_XSMT GPIO_NUM_10   // Soft mute control (active low)
 
 #define MUSIC_DIR "/sd/music"
 
@@ -97,6 +105,11 @@ static char default_track[256] = {0};
 static char default_track_name[64] = {0};
 static volatile bool touch_flag = false;
 
+// I2C device array
+#define MAX_I2C_DEVICES 10
+static uint8_t found_i2c_devices[MAX_I2C_DEVICES] = {0};
+static uint8_t num_i2c_devices = 0;
+
 static void IRAM_ATTR touch_interrupt(void *arg) {
 	(void)arg;
 	touch_flag = true;
@@ -136,7 +149,7 @@ static esp_err_t init_display(void) {
 		.spi = lcd_spi,
 		.dc_pin = SCREEN_DC,
 		.reset_pin = SCREEN_RES,
-		.backlight_pin = SCREEN_BL,
+		.backlight_pin = -1,
 		.backlight_active_high = true,
 	};
 	ESP_RETURN_ON_ERROR(ili9488_init(&lcd, &cfg), TAG, "LCD init failed");
@@ -231,13 +244,59 @@ static esp_err_t init_encoder(void) {
 	return encoder_init(&encoder_handle, &cfg);
 }
 
+static esp_err_t init_i2c_bus(void) {
+	// Initialize I2C bus - used by both GT911 and PCM5242
+	i2c_config_t i2c_conf = {
+		.mode = I2C_MODE_MASTER,
+		.sda_io_num = I2C_SDA,
+		.sda_pullup_en = GPIO_PULLUP_ENABLE,
+		.scl_io_num = I2C_SCL,
+		.scl_pullup_en = GPIO_PULLUP_ENABLE,
+		.master.clk_speed = 400000,
+	};
+	ESP_RETURN_ON_ERROR(i2c_param_config(I2C_NUM_0, &i2c_conf), TAG, "I2C param config failed");
+	ESP_RETURN_ON_ERROR(i2c_driver_install(I2C_NUM_0, i2c_conf.mode, 0, 0, 0), TAG, "I2C driver install failed");
+	return ESP_OK;
+}
+
+static void scan_i2c_quick(void) {
+	printf("SPOTIFY_DESK: Quick I2C device scan:\n");
+	int found_count = 0;
+	for (uint8_t addr = 1; addr < 127; addr++) {
+		i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+		i2c_master_start(cmd);
+		i2c_master_write_byte(cmd, (addr << 1) | I2C_MASTER_WRITE, true);
+		i2c_master_stop(cmd);
+		
+		esp_err_t ret = i2c_master_cmd_begin(I2C_NUM_0, cmd, pdMS_TO_TICKS(100));
+		i2c_cmd_link_delete(cmd);
+		
+		if (ret == ESP_OK) {
+			printf("  Found device at 0x%02X\n", addr);
+			found_count++;
+		}
+	}
+	printf("SPOTIFY_DESK: I2C scan complete - found %d devices\n", found_count);
+}
+
 static esp_err_t init_audio(void) {
+	// Initialize PCM5242 DAC via I2C (non-fatal if it fails)
+	pcm5242_config_t pcm5242_cfg = {
+		.i2c_port = I2C_NUM_0,
+		.xsmt_pin = PCM5242_XSMT,
+	};
+	esp_err_t pcm5242_ret = pcm5242_init(&pcm5242_cfg);
+	if (pcm5242_ret != ESP_OK) {
+		printf("SPOTIFY_DESK: Warning - PCM5242 init failed (0x%x)\n", pcm5242_ret);
+	}
+	
+	// Initialize I2S for audio output
 	audio_i2s_config_t cfg = {
 		.port = I2S_NUM_0,
 		.mclk_pin = I2S_MCLK,
 		.bclk_pin = I2S_BCLK,
 		.lrclk_pin = I2S_LRCLK,
-		.dout_pin = I2S_DOUT,
+		.dout_pin = I2S_DIN,
 		.sample_rate_hz = 44100,
 	};
 	return audio_init(&cfg);
@@ -251,8 +310,6 @@ static void input_task(void *arg) {
 
 	while (true) {
 		if (touch_handle) {
-			if (touch_flag) {
-				touch_flag = false;
 			if (gt911_read_touch_points(touch_handle, &touch_data) == ESP_OK && touch_data.num_points > 0) {
 				input_event_t evt = {
 					.type = INPUT_EVENT_TOUCH,
@@ -263,11 +320,13 @@ static void input_task(void *arg) {
 				};
 				evt.data.touch.x = evt.data.touch.x >= ILI9488_WIDTH ? ILI9488_WIDTH - 1 : evt.data.touch.x;
 				evt.data.touch.y = evt.data.touch.y >= ILI9488_HEIGHT ? ILI9488_HEIGHT - 1 : evt.data.touch.y;
+				printf("TOUCH: X=%u, Y=%u\n", evt.data.touch.x, evt.data.touch.y);
+				fflush(stdout);
 				ESP_LOGI(TAG, "Touch: %u,%u", evt.data.touch.x, evt.data.touch.y);
 				xQueueSend(input_queue, &evt, 0);
 			}
 		}
-		}
+		vTaskDelay(delay);
 
 		while (encoder_get_event(encoder_handle, &enc_event, 0)) {
 			input_event_t evt = {.type = INPUT_EVENT_TOUCH};
@@ -374,45 +433,224 @@ static void ui_task(void *arg) {
 	}
 }
 
-void app_main(void) {
-	ESP_LOGI(TAG, "Spotify Desk Thing boot");
-	init_nvs();
-	ESP_ERROR_CHECK(init_spi_bus());
-	ESP_ERROR_CHECK(init_display());
-	ESP_ERROR_CHECK(init_touch());
-	ESP_ERROR_CHECK(init_encoder());
-	ESP_ERROR_CHECK(init_audio());
+void console_echo_task(void *arg) {
+	(void)arg;
+	printf("Console Echo Started\n");
+	fflush(stdout);
+	
+	char buffer[256];
+	int pos = 0;
+	
+	// Set stdin to non-blocking mode
+	int flags = fcntl(STDIN_FILENO, F_GETFL, 0);
+	fcntl(STDIN_FILENO, F_SETFL, flags | O_NONBLOCK);
+	
+	while (1) {
+		// Non-blocking read
+		int c = getchar();
+		if (c != EOF) {
+			// Store in buffer
+			if (pos < (int)sizeof(buffer) - 1) {
+				buffer[pos++] = c;
+				if (c == '\n') {
+					buffer[pos] = '\0';
+					// Print with echo: prefix
+					printf("echo: %s", buffer);
+					fflush(stdout);
+					pos = 0;
+				}
+			}
+		}
+		
+		// Always yield to prevent watchdog timeout
+		vTaskDelay(pdMS_TO_TICKS(100));
+	}
+}
 
-	input_queue = xQueueCreate(16, sizeof(input_event_t));
-	audio_queue = xQueueCreate(8, sizeof(audio_command_t));
-	if (!input_queue || !audio_queue) {
-		ESP_LOGE(TAG, "Failed to allocate queues");
+void encoder_monitor_task(void *arg) {
+	(void)arg;
+	encoder_handle_t *encoder = (encoder_handle_t *)arg;
+	encoder_event_t event;
+	
+	while (1) {
+		if (encoder_get_event(encoder, &event, pdMS_TO_TICKS(100))) {
+			switch (event.type) {
+				case ENCODER_EVENT_LEFT:
+					printf("ENCODER: Moving LEFT\n");
+					fflush(stdout);
+					break;
+				case ENCODER_EVENT_RIGHT:
+					printf("ENCODER: Moving RIGHT\n");
+					fflush(stdout);
+					break;
+				case ENCODER_EVENT_BUTTON:
+					printf("ENCODER: Button pressed\n");
+					fflush(stdout);
+					break;
+				default:
+					break;
+			}
+		}
+		vTaskDelay(pdMS_TO_TICKS(10));
+	}
+}
+
+void tone_task(void *arg) {
+	(void)arg;
+	
+	// Play 1kHz tone continuously
+	while (1) {
+		audio_play_beep(1000.0f, 500, 0.5f);  // 1kHz, 0.5 second, 50% volume
+		vTaskDelay(pdMS_TO_TICKS(100));  // Small delay between tones
+	}
+}
+
+static uint16_t ui_color(uint8_t r, uint8_t g, uint8_t b) {
+	return ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
+}
+
+static void ui_draw_char(ui_context_t *ctx, int x, int y, char c, uint8_t scale, uint16_t fg, uint16_t bg) {
+	// Simple character drawing - create a filled rectangle for now
+	uint8_t char_width = 5 * scale;
+	uint8_t char_height = 7 * scale;
+	ili9488_fill_color(ctx->display, x, y, char_width, char_height, fg);
+}
+
+static void ui_draw_text(ui_context_t *ctx, int x, int y, const char *text, uint8_t scale, uint16_t fg, uint16_t bg) {
+	if (!text) {
 		return;
 	}
+	int cursor_x = x;
+	for (const char *p = text; *p; ++p) {
+		if (*p == '\n') {
+			cursor_x = x;
+			y += (7 + 2) * scale;
+			continue;
+		}
+		ui_draw_char(ctx, cursor_x, y, *p, scale, fg, bg);
+		cursor_x += (5 + 1) * scale;
+	}
+}
 
-	ui_config_t ui_cfg = {
-		.display = &lcd,
-		.background_color = 0,
-		.accent_color = 0,
-	};
-	ESP_ERROR_CHECK(ui_init(&ui_ctx, &ui_cfg));
-
-	if (mount_sd() == ESP_OK) {
-		list_music_files(MUSIC_DIR);
-		if (find_first_wav(MUSIC_DIR, default_track, sizeof(default_track))) {
-			ESP_LOGI(TAG, "Default track: %s", default_track);
-			const char *name = strrchr(default_track, '/');
-			name = name ? name + 1 : default_track;
-			
-			strncpy(default_track_name, name, sizeof(default_track_name) - 1);
-			default_track_name[sizeof(default_track_name) - 1] = '\0';
-			ui_set_track(&ui_ctx, default_track_name);
-		} else {
-			ESP_LOGW(TAG, "No WAV files found in %s", MUSIC_DIR);
+static void scan_i2c_devices(void) {
+	num_i2c_devices = 0;
+	printf("Scanning I2C bus...\n");
+	
+	// Scan addresses 0x00 to 0x7F
+	for (uint8_t addr = 1; addr < 127; addr++) {
+		i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+		i2c_master_start(cmd);
+		i2c_master_write_byte(cmd, (addr << 1) | I2C_MASTER_WRITE, true);
+		i2c_master_stop(cmd);
+		
+		esp_err_t ret = i2c_master_cmd_begin(I2C_NUM_0, cmd, pdMS_TO_TICKS(100));
+		i2c_cmd_link_delete(cmd);
+		
+		if (ret == ESP_OK && num_i2c_devices < MAX_I2C_DEVICES) {
+			found_i2c_devices[num_i2c_devices] = addr;
+			num_i2c_devices++;
+			printf("Found I2C device at 0x%02X\n", addr);
 		}
 	}
+	printf("I2C scan complete. Found %d devices.\n", num_i2c_devices);
+}
 
-	xTaskCreatePinnedToCore(ui_task, "ui_task", 4096, NULL, 5, NULL, 1);
-	xTaskCreatePinnedToCore(input_task, "input_task", 4096, NULL, 6, NULL, 0);
-	xTaskCreatePinnedToCore(audio_task, "audio_task", 4096, NULL, 5, NULL, 0);
+void display_task(void *arg) {
+	(void)arg;
+	
+	// Scan I2C bus on startup
+	vTaskDelay(pdMS_TO_TICKS(500));
+	scan_i2c_devices();
+	
+	while (1) {
+		// Clear screen with black background
+		ili9488_fill_color(&lcd, 0, 0, ILI9488_WIDTH, ILI9488_HEIGHT, 0x0000);
+		
+		// Display I2C devices
+		uint16_t white = ui_color(255, 255, 255);
+		uint16_t black = ui_color(0, 0, 0);
+		
+		char i2c_text[256] = {0};
+		snprintf(i2c_text, sizeof(i2c_text), "I2C Devices: %d found", num_i2c_devices);
+		
+		// Draw title
+		ili9488_fill_color(&lcd, 0, 0, ILI9488_WIDTH, 30, white);
+		
+		// Draw device list
+		int y_offset = 50;
+		for (int i = 0; i < num_i2c_devices && i < 15; i++) {
+			char device_str[32];
+			snprintf(device_str, sizeof(device_str), "0x%02X", found_i2c_devices[i]);
+			
+			// Alternate colors for visibility
+			uint16_t color = (i % 2 == 0) ? ui_color(0, 255, 0) : ui_color(0, 255, 255);
+			ili9488_fill_color(&lcd, 20, y_offset + (i * 25), 280, 20, color);
+			y_offset += 5;
+		}
+		
+		vTaskDelay(pdMS_TO_TICKS(5000));
+	}
+}
+
+void app_main(void) {
+	printf("SPOTIFY_DESK: Starting up\n");
+	
+	// Initialize SPI bus for display
+	printf("SPOTIFY_DESK: Initializing SPI bus\n");
+	ESP_ERROR_CHECK(init_spi_bus());
+	printf("SPOTIFY_DESK: SPI bus initialized\n");
+	
+	// Initialize display
+	printf("SPOTIFY_DESK: Initializing display\n");
+	ESP_ERROR_CHECK(init_display());
+	printf("SPOTIFY_DESK: Display initialized\n");
+	
+	// Initialize I2C bus (required by both touch and audio)
+	printf("SPOTIFY_DESK: Initializing I2C bus\n");
+	ESP_ERROR_CHECK(init_i2c_bus());
+	printf("SPOTIFY_DESK: I2C bus initialized\n");
+	
+	// Scan I2C devices to diagnose what's on the bus
+	scan_i2c_quick();
+	
+	// Initialize touch (non-fatal if it fails)
+	printf("SPOTIFY_DESK: Initializing touch\n");
+	esp_err_t touch_ret = init_touch();
+	if (touch_ret != ESP_OK) {
+		printf("SPOTIFY_DESK: Touch init failed (0x%x), continuing without touch\n", touch_ret);
+		touch_handle = NULL;
+	} else {
+		printf("SPOTIFY_DESK: Touch initialized\n");
+	}
+	
+	// Initialize audio
+	printf("SPOTIFY_DESK: Initializing audio\n");
+	ESP_ERROR_CHECK(init_audio());
+	printf("SPOTIFY_DESK: Audio initialized\n");
+	
+	// Initialize encoder
+	printf("SPOTIFY_DESK: Initializing encoder\n");
+	encoder_config_t cfg = {
+		.pin_a = ENC_A,
+		.pin_b = ENC_B,
+		.pin_button = ENC_SW,
+		.button_active_level_low = true,
+		.debounce_ms = 5,
+	};
+	ESP_ERROR_CHECK(encoder_init(&encoder_handle, &cfg));
+	printf("SPOTIFY_DESK: Encoder initialized\n");
+	
+	// Create input queue
+	input_queue = xQueueCreate(10, sizeof(input_event_t));
+	
+	// Create tasks for input handling, encoder monitoring, tone playing, and display
+	xTaskCreatePinnedToCore(input_task, "input", 2048, NULL, 4, NULL, 0);
+	xTaskCreatePinnedToCore(encoder_monitor_task, "encoder_monitor", 2048, (void *)encoder_handle, 5, NULL, 0);
+	xTaskCreatePinnedToCore(tone_task, "tone", 2048, NULL, 4, NULL, 1);
+	xTaskCreatePinnedToCore(display_task, "display", 4096, NULL, 3, NULL, 0);
+	
+	// Keep main task alive
+	while (1) {
+		vTaskDelay(pdMS_TO_TICKS(1000));
+	}
 }

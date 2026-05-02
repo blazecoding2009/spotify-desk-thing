@@ -1,4 +1,4 @@
-(pcb freerouting.dsn
+(pcb "C:\Users\arnna\Desktop\spotify desk thing\pcb\temp-freerouting.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)

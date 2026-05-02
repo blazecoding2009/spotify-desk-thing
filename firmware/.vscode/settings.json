@@ -13,6 +13,8 @@
   "clangd.arguments": [
     "--background-index",
     "--query-driver=**",
-    "--compile-commands-dir=c:\\Users\\arnna\\Desktop\\spotify desk thing\\src\\build"
-  ]
+    "--compile-commands-dir=c:\\Users\\arnna\\Desktop\\spotify desk thing\\firmware\\build"
+  ],
+  "idf.portWin": "COM16",
+  "idf.flashType": "UART"
 }

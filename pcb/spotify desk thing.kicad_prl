@@ -113,7 +113,32 @@
   },
   "open_jobsets": [],
   "project": {
-    "files": []
+    "files": [
+      {
+        "name": "spotify desk thing.kicad_pro",
+        "open": false,
+        "window": {
+          "display": 0,
+          "maximized": false,
+          "pos_x": 389,
+          "pos_y": 103,
+          "size_x": 1142,
+          "size_y": 813
+        }
+      },
+      {
+        "name": "spotify desk thing.kicad_pcb",
+        "open": false,
+        "window": {
+          "display": 0,
+          "maximized": true,
+          "pos_x": -9,
+          "pos_y": -9,
+          "size_x": 1938,
+          "size_y": 1038
+        }
+      }
+    ]
   },
   "schematic": {
     "selection_filter": {
