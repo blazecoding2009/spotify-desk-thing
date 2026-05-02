@@ -2,7 +2,7 @@
 ### custom made pcb to be like the [spotify car thing](https://support.spotify.com/us/article/car-thing-discontinued/) (sadly discontinued)
 
 yeah this is something i literally thought of while sitting and listening to music and i think it'd look cool lol
-
+the whole project is pretty self-explanatory, a replacement to the spotify desk think, you could use this as a deskpad with diff firmware too!!
 <img width="943" height="528" alt="image" src="https://github.com/user-attachments/assets/2e3d793b-31e7-4be5-a76f-ae14f464c783" />
 
 <img width="1157" height="692" alt="image" src="https://github.com/user-attachments/assets/f8da136f-9c3b-475f-a4b2-7d8a0f59a228" />
